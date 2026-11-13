@@ -1,0 +1,30 @@
+.bp-story { --story-blue: #a9dbee; --story-ink: #0b0c0e; --story-line: #3e4d59; }
+.bp-story h2 { margin: 0 0 .45em; }
+.bp-story h2 + p { max-width: 65ch; color: #cad2d8; }
+.bp-story-layout { display: grid; gap: 24px; align-items: start; margin-top: 26px; }
+.bp-story-display { min-width: 0; border: 1px solid var(--story-line); background: #10171e; }
+.bp-story-surface { aspect-ratio: 760/460; overflow: hidden; }
+.bp-story-frame { width: 100%; height: 100%; }
+.bp-story-frame svg { display: block; width: 100%; height: auto; }
+.bp-story-steps { list-style: none; padding: 0; margin: 0; counter-reset: bp-step; }
+.bp-story-steps li { counter-increment: bp-step; position: relative; padding: 18px 12px 18px 44px; border-top: 1px solid var(--story-line); }
+.bp-story-steps li::before { content: counter(bp-step, decimal-leading-zero); position: absolute; top: 20px; left: 8px; color: var(--story-blue); font: 13px/1.5 ui-monospace, monospace; }
+.bp-story-step-number { display: none; }
+.bp-story-steps h3 { font-size: clamp(20px, 2vw, 29px); margin: 0 0 8px; }
+.bp-story-steps p, .bp-story-note { color: #cad2d8; font-size: 15px; margin-bottom: 0; }
+.bp-story-note { padding-top: 16px; }
+.bp-story.is-enhanced .bp-story-display { position: sticky; top: 76px; z-index: 2; }
+.bp-story.is-enhanced .bp-story-steps li { min-height: 180px; }
+.bp-story-steps li[aria-current="step"] { background: #19242d; border-top-color: #b2d9ea; }
+.bp-story-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px; padding: 5px 8px; border-top: 1px solid var(--story-line); color: #e8edf2; }
+.bp-story-controls button { min-height: 44px; padding: 6px 10px; background: #23313c; border: 1px solid #5f7686; color: #f5f0e8; font-size: 13px; }
+.bp-story-controls button:disabled { color: #a8b2ba; background: #18212a; cursor: default; }
+.bp-story-controls span { padding: 0 4px; font: 12px/1.3 ui-monospace, monospace; }
+.bp-standalone { background: #0b0c0e; color: #f3eee4; }
+@media (min-width: 840px) {
+  .bp-story-layout { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 34px; }
+  .bp-story.is-enhanced .bp-story-display { top: 96px; }
+  .bp-story.is-enhanced .bp-story-steps li { min-height: 218px; }
+}
+@media (max-height: 560px) { .bp-story.is-enhanced .bp-story-display { position: static; } }
+@media (prefers-reduced-motion: reduce) { .bp-story.is-enhanced .bp-story-display { position: static; } }

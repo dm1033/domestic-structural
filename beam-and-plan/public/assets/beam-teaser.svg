@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" fill="none">
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" stroke="#73c1e1" stroke-opacity=".19"/></pattern><pattern id="brick" width="27" height="15" patternUnits="userSpaceOnUse"><path d="M0 0h27M0 7.5h27M9 0v7.5m13 0V15" stroke="#87c5de" stroke-opacity=".48"/></pattern></defs>
+  <rect x="1" y="1" width="638" height="378" fill="#0b0c0e" fill-opacity=".57" stroke="#8ca7b7" stroke-opacity=".35"/>
+  <rect x="18" y="18" width="604" height="344" fill="url(#grid)"/>
+  <g stroke="#92dbef" stroke-width="1.6"><path d="M52 327h336M81 327V178l133-79 126 74v154M65 190l149-91 146 89M76 193h277M112 193v134m205-134v134M142 327v-92h151v92M139 228h159v8H139zM76 278h63m159 0h50M142 341h151m-151-7v15m151-15v15"/><path d="M116 234h23v93h-23zm182 0h18v93h-18z" fill="url(#brick)"/><path d="M175 214h90m-45-14v26M296 225l80-63 46-6" stroke-dasharray="4 5"/><path d="M142 327h151" stroke-dasharray="5 6"/></g>
+  <g stroke="#f09179" stroke-width="1.6" stroke-linejoin="round"><path d="m314 115 202-76 45 15-202 77z" fill="#9d4939"/><path d="m359 131 202-77v12l-202 77z" fill="#723629"/><path d="m333 130 202-76 14 5-201 76v63l-15-5z" fill="#8c4537"/><path d="m348 198 201-75 12 4-202 77z" fill="#ad5440"/><path d="m314 190 202-76 45 13-202 77z" fill="#9b4d3c"/><path d="m314 115 45 16v12l-18-6v54l18 6v12l-45-16v-12l18 7v-54l-18-7z" fill="#c86a55"/></g>
+  <path d="M385 306h216m-216 12h216" stroke="#6e9db3" stroke-opacity=".55"/>
+  <text x="397" y="293" fill="#b7ddeb" font-family="monospace" font-size="14" letter-spacing="2">OPENING STUDY</text><text x="397" y="338" fill="#b7ddeb" font-family="monospace" font-size="12">ILLUSTRATIVE SECTION</text>
+</svg>

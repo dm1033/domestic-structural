@@ -1,0 +1,16 @@
+{
+  "name": "beam-and-plan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check scripts/build.mjs && node --check public/assets/site.js && node --check src/content.mjs && node --check public/assets/story.js",
+    "typecheck": "npm run check",
+    "components": "node scripts/build-components.mjs"
+  }
+}

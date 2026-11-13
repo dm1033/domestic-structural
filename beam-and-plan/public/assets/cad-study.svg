@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0v22" stroke="#5c8ca8" stroke-opacity=".2"/></pattern><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12 12 0" stroke="#8dc4d9" stroke-opacity=".55"/></pattern></defs>
+  <rect width="640" height="400" fill="#10181f"/><rect x="12" y="12" width="616" height="376" fill="url(#grid)" stroke="#5d899d"/>
+  <g stroke="#a5dced" stroke-width="1.7"><path d="M72 314h496M99 314V101h49v213m341 0V101h51v213M75 91h490M75 100h490M148 147h341m-341 31h341M148 341h341m-341-15v27m341-27v27"/><path d="M99 108h49v206H99zM489 108h51v206h-51z" fill="url(#hatch)"/><path d="M148 153h341v18H148z" fill="#8d4637" stroke="#f09179"/><path d="M162 342l-14-1 14-7m313 0 14 7-14 1M335 144l37-43h109M148 305h341" stroke-dasharray="5 4"/></g>
+  <g fill="#bce4f2" font-family="monospace" font-size="15"><text x="36" y="48" letter-spacing="2">SECTION A–A / PROPOSED</text><text x="376" y="80">B1 / STEEL BEAM</text><text x="216" y="371">OPENING TO BE VERIFIED</text></g>
+</svg>

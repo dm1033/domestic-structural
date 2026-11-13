@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="990" viewBox="0 0 1400 990" role="img" aria-labelledby="drawing-title drawing-desc">
+  <title id="drawing-title">Beam &amp; Plan — illustrative home alteration layout</title>
+  <desc id="drawing-desc">A demonstration CAD-style sheet showing a rectangular five-metre by four-metre room, a centred three-metre opening in a wall at the midpoint, beam reference B1 and support references S1 and S2. The geometry is proportionate. No member sizes, loads, foundations, construction specifications or design approval are provided. Illustrative only, not for construction.</desc>
+  <defs>
+    <style>
+      .paper{fill:#f3eee4}.ink{fill:#0b0c0e}.gold{fill:#a37c36}.muted{fill:#55575b}
+      .sans{font-family:Arial,Helvetica,sans-serif}.serif{font-family:Georgia,'Times New Roman',serif}
+      .rule{fill:none;stroke:#0b0c0e;stroke-width:1.2}.fine{fill:none;stroke:#8c8981;stroke-width:1}
+      .wall{fill:#dcd8cf;stroke:#0b0c0e;stroke-width:2}.dim{fill:none;stroke:#55575b;stroke-width:1.2}
+      .tick{fill:none;stroke:#0b0c0e;stroke-width:1.6}.reference{fill:none;stroke:#0b0c0e;stroke-width:2}
+      .small{font-size:16px}.body{font-size:20px}.note{font-size:18px}.caption{font-size:15px;letter-spacing:1.3px}
+    </style>
+  </defs>
+
+  <rect class="paper" width="1400" height="990"/>
+  <rect class="rule" x="30" y="30" width="1340" height="930"/>
+  <text class="serif ink" x="65" y="91" font-size="43">beam <tspan fill="#a37c36">&amp;</tspan> plan</text>
+  <text class="sans muted" x="65" y="119" font-size="12" letter-spacing="1.35">TEMPORARY WORKS CONSULTING &amp; DESIGN LTD</text>
+  <text class="sans ink" x="1335" y="83" text-anchor="end" font-size="25">Illustrative home alteration layout</text>
+  <text class="sans muted small" x="1335" y="114" text-anchor="end">Demonstration of drawing presentation and references</text>
+  <line class="rule" x1="65" y1="142" x2="1335" y2="142"/>
+  <rect x="65" y="160" width="1270" height="39" fill="#0b0c0e"/>
+  <text class="sans" x="700" y="186" text-anchor="middle" font-size="18" letter-spacing="2.1" fill="#f3eee4">ILLUSTRATIVE ONLY — NOT FOR CONSTRUCTION</text>
+
+  <!-- Reference geometry: 0.13 SVG units per millimetre. 5000 × 4000 = 650 × 520. -->
+  <g id="reference-plan">
+    <!-- Overall reference dimensions. -->
+    <path class="dim" d="M180 270V211M830 270V211M180 225H830M170 280H111M170 800H111M125 280V800"/>
+    <path class="tick" d="m174 231 12-12m638 12 12-12m-717 55 12 12m-12 508 12 12"/>
+    <rect class="paper" x="462" y="205" width="86" height="30"/>
+    <text class="sans ink body" x="505" y="226" text-anchor="middle">5000</text>
+    <rect class="paper" x="110" y="496" width="30" height="88"/>
+    <text class="sans ink body" x="130" y="540" text-anchor="middle" transform="rotate(-90 130 540)">4000</text>
+
+    <!-- Existing wall outlines are diagrammatic: their thickness is not specified. -->
+    <path class="wall" fill-rule="evenodd" d="M180 280H830V800H180Z M198 298V782H812V298Z"/>
+    <rect class="wall" x="198" y="527" width="112" height="26"/>
+    <rect class="wall" x="700" y="527" width="112" height="26"/>
+    <line class="fine" x1="198" y1="540" x2="310" y2="540"/>
+    <line class="fine" x1="700" y1="540" x2="812" y2="540"/>
+
+    <text class="sans muted caption" x="505" y="387" text-anchor="middle">EXISTING ROOM / REFERENCE OUTLINE</text>
+    <text class="serif ink" x="505" y="427" text-anchor="middle" font-size="29">A proposed opening</text>
+    <text class="sans muted small" x="505" y="455" text-anchor="middle">Structure and load path require assessment</text>
+
+    <!-- B1 is a reference symbol, not a sized structural member. -->
+    <path class="reference" d="M310 535H700M310 545H700"/>
+    <rect x="466" y="479" width="78" height="34" fill="#f3eee4" stroke="#a37c36" stroke-width="1.6"/>
+    <text class="sans ink" x="505" y="502" text-anchor="middle" font-size="21">B1</text>
+    <path class="dim" d="M505 513V534"/>
+    <circle cx="505" cy="535" r="3" fill="#0b0c0e"/>
+    <rect class="reference" x="303" y="526" width="14" height="28" fill="#f3eee4"/>
+    <rect class="reference" x="693" y="526" width="14" height="28" fill="#f3eee4"/>
+    <text class="sans ink body" x="310" y="584" text-anchor="middle">S1</text>
+    <text class="sans ink body" x="700" y="584" text-anchor="middle">S2</text>
+
+    <!-- Three-metre opening is 390 units, centred within the 650-unit outline. -->
+    <path class="dim" d="M310 595V634M700 595V634M310 617H700"/>
+    <path class="tick" d="m304 623 12-12m378 12 12-12"/>
+    <rect class="paper" x="459" y="599" width="92" height="31"/>
+    <text class="sans ink body" x="505" y="621" text-anchor="middle">3000</text>
+    <text class="sans muted caption" x="505" y="704" text-anchor="middle">ILLUSTRATIVE GEOMETRY ONLY</text>
+    <text class="sans muted small" x="505" y="735" text-anchor="middle">No structural member or support specification</text>
+    <text class="sans muted small" x="180" y="832">Reference dimensions in mm. Do not scale from a screen or print.</text>
+  </g>
+
+  <line class="fine" x1="915" y1="235" x2="915" y2="832"/>
+  <g id="drawing-key" class="sans">
+    <text class="serif ink" x="955" y="271" font-size="31">Drawing references</text>
+    <line class="fine" x1="955" y1="292" x2="1325" y2="292"/>
+
+    <text class="gold" x="955" y="334" font-size="23">B1</text>
+    <text class="ink body" x="955" y="366">Reference only — member size</text>
+    <text class="ink body" x="955" y="394">requires design.</text>
+
+    <text class="gold" x="955" y="446" font-size="23">S1 / S2</text>
+    <text class="ink body" x="955" y="478">Support positions to be assessed.</text>
+    <text class="muted note" x="955" y="511">Symbols do not specify a support</text>
+    <text class="muted note" x="955" y="537">type, bearing or foundation.</text>
+
+    <line class="fine" x1="955" y1="567" x2="1325" y2="567"/>
+    <text class="serif ink" x="955" y="610" font-size="28">Read this example</text>
+    <text class="ink body" x="955" y="649">Existing construction to be verified.</text>
+    <text class="muted note" x="955" y="691">This sheet illustrates presentation.</text>
+    <text class="muted note" x="955" y="719">It contains no load assessment,</text>
+    <text class="muted note" x="955" y="747">structural sizing or construction</text>
+    <text class="muted note" x="955" y="775">instructions for a real property.</text>
+    <text class="gold caption" x="955" y="819">NO DESIGN APPROVAL IS IMPLIED</text>
+  </g>
+
+  <!-- Sheet information only: no certification or approval signature fields. -->
+  <g id="title-block" class="sans ink">
+    <rect class="rule" x="65" y="859" width="1270" height="70"/>
+    <path class="rule" d="M805 859V929M1070 859V929M1205 859V929"/>
+    <text class="muted" x="81" y="881" font-size="12" letter-spacing="1.2">DRAWING</text>
+    <text x="81" y="909" font-size="21">Illustrative home alteration layout</text>
+    <text class="muted" x="822" y="881" font-size="12" letter-spacing="1.2">DRAWING REFERENCE</text>
+    <text x="822" y="909" font-size="22">DEM-001</text>
+    <text class="muted" x="1086" y="881" font-size="12" letter-spacing="1.2">REVISION</text>
+    <text x="1086" y="909" font-size="22">P01</text>
+    <text class="muted" x="1221" y="881" font-size="12" letter-spacing="1.2">STATUS</text>
+    <text x="1221" y="907" font-size="12.5" font-weight="bold">DEMONSTRATION</text>
+  </g>
+  <text class="sans ink" x="700" y="951" text-anchor="middle" font-size="13" letter-spacing="1.7">ILLUSTRATIVE ONLY — NOT FOR CONSTRUCTION</text>
+</svg>
