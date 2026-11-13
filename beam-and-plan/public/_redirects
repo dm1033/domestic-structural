@@ -1,0 +1,12 @@
+https://www.beamandplan.com/* https://beamandplan.com/:splat 301!
+http://www.beamandplan.com/* https://beamandplan.com/:splat 301!
+http://beamandplan.com/* https://beamandplan.com/:splat 301!
+https://domestic-structural.netlify.app/* https://beamandplan.com/:splat 301!
+/index.html / 301
+/wall-removal/ /projects/wall-removal/ 301
+/steel-beam-calculations/ /services/steel-beam-calculations/ 301
+/house-extension/ /projects/extension/ 301
+/services/beam-design /services/steel-beam-calculations/ 301
+/services/extensions /projects/extension/ 301
+/services/foundations /projects/foundations/ 301
+/services/planning-drawings /services/planning-permission/ 301

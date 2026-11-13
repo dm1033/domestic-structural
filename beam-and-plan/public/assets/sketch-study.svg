@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs><pattern id="paper" width="21" height="19" patternUnits="userSpaceOnUse"><path d="M3 6h2m9 10h3" stroke="#b7aa91" stroke-opacity=".3"/></pattern><pattern id="hatch" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M0 11 11 0" stroke="#5b5148" stroke-opacity=".48"/></pattern></defs>
+  <rect width="640" height="400" fill="#e6ddc9"/><rect width="640" height="400" fill="url(#paper)"/>
+  <g transform="rotate(-2 320 200)" stroke="#514942" stroke-width="2" stroke-linecap="round" fill="none"><path d="M72 314q176 3 489-3M100 320l-3-218 51-1 2 223m340 0-3-224 57-2 2 219M147 153l342-5 1 27-340 4z"/><path d="m99 111 44-1v203h-42zM489 110l48-3 3 205h-50z" fill="url(#hatch)"/><path d="m158 156 323-5m-330 21 333-5M146 342l343-1m-341-11-2 22m345-23v22"/><path d="m160 342-12-2 11-6m319 5 12 2-10 6M290 93q-36 25-61 55m0 0 16-7m-16 7 2-14m163 103 56-61m0 0-2 13m2-13-12 4"/><path d="M151 304h335" stroke-dasharray="9 9" opacity=".55"/></g>
+  <g fill="#514942" font-family="Georgia,serif" font-style="italic" font-size="22"><text x="246" y="76" transform="rotate(-6 246 76)">New opening?</text><text x="351" y="259" transform="rotate(-4 351 259)">Check support</text><text x="257" y="367" transform="rotate(-2 257 367)">opening width</text></g>
+</svg>

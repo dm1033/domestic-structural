@@ -1,0 +1,7 @@
+dist/
+components-dist/
+.netlify/
+node_modules/
+.env*
+.openai/
+test-results/
