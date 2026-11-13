@@ -1,0 +1,124 @@
+@import 'tailwindcss' source('../');
+
+@theme {
+  --color-paper: #f2eee4;
+  --color-paper-deep: #e7e1d3;
+  --color-ink: #1c211f;
+  --color-ink-soft: #4a514d;
+  --color-oxide: #b0442a;
+  --color-oxide-deep: #8e3420;
+  --color-rule: #c9c1ae;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Public Sans', ui-sans-serif, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* faint drafting grid */
+  background-image:
+    linear-gradient(rgb(28 33 31 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(28 33 31 / 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+::selection {
+  background: var(--color-oxide);
+  color: var(--color-paper);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.98;
+}
+
+.annot {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-label {
+  @apply block mb-2 font-mono text-xs uppercase tracking-[0.08em] text-ink-soft;
+}
+
+.form-input {
+  @apply w-full border border-ink/25 bg-paper px-4 py-3 text-ink transition-colors focus-visible:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oxide;
+}
+
+.action {
+  @apply inline-flex items-center gap-3 bg-oxide px-6 py-3.5 font-semibold text-paper transition-[background-color,transform] hover:bg-oxide-deep active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink disabled:cursor-wait;
+}
+
+.action-ghost {
+  @apply inline-flex items-center gap-3 border border-ink px-6 py-3.5 font-semibold transition-colors hover:bg-ink hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oxide;
+}
+
+/* dimension line used as a decorative annotation */
+.dim {
+  position: relative;
+  height: 1px;
+  background: currentColor;
+}
+.dim::before,
+.dim::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 1px;
+  height: 11px;
+  background: currentColor;
+}
+.dim::before {
+  left: 0;
+}
+.dim::after {
+  right: 0;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.rise {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.draw {
+  transform-origin: left;
+  animation: draw 1.1s cubic-bezier(0.6, 0, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise,
+  .draw {
+    animation: none;
+  }
+}
