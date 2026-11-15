@@ -3,8 +3,8 @@ import { esc, faqBlock, quoteForm } from './templates.mjs';
 import { beamStory } from './beam-story.mjs';
 import { plotStory } from './plot-story.mjs';
 
-export const homeTitle = 'Structural Engineering for Homeowners';
-export const homeDescription = 'Fixed-fee structural engineering for homeowners. Signed beam calculations, builder-ready CAD drawings, extensions, foundations and planning help.';
+export const homeTitle = 'Structural Engineer in Norwich & Norfolk';
+export const homeDescription = 'Fixed-fee structural calculations in Norwich and Norfolk. Get signed steel beam, extension and foundation designs with CAD drawings. Request a quote.';
 
 const whatsapp = 'https://wa.me/447900984900';
 const regCheck = 'https://www.engc.org.uk/professional-registration/check-a-registration/';
@@ -23,6 +23,7 @@ export const homeFaqs = [
   { q: 'Do I need calculations to remove a wall?', a: 'If the wall carries part of the house, the new support needs to be designed. Tell us what you want to change. We will confirm what information, inspection and calculations the project needs.' },
   { q: 'What will my builder and Building Control receive?', a: 'The quote sets out your deliverables. A structural design package typically includes signed calculations, clear CAD drawings and the details your builder needs for the agreed scope. Building Control reviews the submission separately.' },
   { q: 'How much will it cost?', a: 'We agree a fixed fee before work starts. Your quote sets out the drawings, calculations, included support, applicable VAT and any separately priced visits or investigations.' },
+  { q: 'How quickly can I get my structural calculations?', a: 'Send the project postcode, plans or photos, and the date you need the drawings. We will check the information and confirm the earliest date we can offer with your fixed-fee quote.' },
   { q: 'Can I start with a sketch or some photos?', a: 'Yes. Send your postcode, what you want to change and any plans or safely taken photos you already have. We will tell you what needs to be confirmed before design.' },
   { q: 'Are planning permission and Building Regulations the same?', a: 'They are separate processes. Planning considers the proposed development. Building Regulations deal with how the work is designed and built. We help identify which drawings and structural information your project needs.' },
   { q: 'Can you help with party walls and boundaries?', a: 'We can provide measured survey and boundary drawings for the agreed scope. We are not party wall surveyors, but our drawings give a surveyor what they need. Legal boundary disputes need a boundary surveyor or solicitor.' },
@@ -71,7 +72,7 @@ const process = [
 export function homepageBody(backend) {
   return `<section class="bp-hero" aria-labelledby="bp-hero-title">
     <img class="bp-hero-photo" src="/assets/home-extension.webp" width="1536" height="1024" alt="" fetchpriority="high">
-    <div class="wrap bp-hero-grid"><div class="bp-hero-copy"><h1 id="bp-hero-title">Structural<br>design for<br>your home.</h1><p class="bp-hero-lead">From the first idea to clear drawings and signed calculations for Building Control. Get the work you need, with a fixed fee agreed before we start.</p><p class="bp-signoff">Beam &amp; Plan will sort it.</p>${actions()}</div>
+    <div class="wrap bp-hero-grid"><div class="bp-hero-copy"><h1 id="bp-hero-title">Structural design for your home.</h1><p class="bp-hero-lead">Need a steel beam, extension or foundation design? Get signed calculations and clear CAD drawings for your builder and Building Control. Agree the fixed fee and delivery date before work starts.</p><p class="bp-signoff">Beam &amp; Plan will sort it.</p>${actions()}</div>
     <a class="bp-hero-teaser" href="#from-sum-to-steel"><span class="bp-label">Design study 01</span><span class="bp-teaser-title">From sum to steel ${arrow}</span><img src="/assets/beam-teaser.svg" width="640" height="380" alt="Illustrative section of a house opening with an isometric steel beam" decoding="async"></a></div>
   </section>
   <ul class="wrap bp-trust" aria-label="What you can expect"><li>Fixed fee</li><li>Signed calcs</li><li>Builder-ready</li><li>Plain English</li><li>CEng-led</li></ul>
@@ -79,7 +80,8 @@ export function homepageBody(backend) {
     <div class="bp-sketch" data-bp-sketch><figure><img src="/assets/sketch-study.svg" width="640" height="400" alt="Hand-drawn concept for a new opening in a wall" loading="lazy"><figcaption>01 / Your idea</figcaption></figure><span class="bp-sketch-arrow" aria-hidden="true">→</span><figure><div class="bp-cad-stack"><img src="/assets/sketch-study.svg" width="640" height="400" alt="" aria-hidden="true" loading="lazy"><div class="bp-cad-reveal" data-bp-cad><img src="/assets/cad-study.svg" width="640" height="400" alt="Illustrative CAD drawing showing the same opening with clear reference lines and a steel beam" loading="lazy"></div></div><figcaption>02 / Clear drawing</figcaption></figure></div>
     <p class="bp-small">Illustrative drawings. Every design is prepared for the property and agreed scope.</p>${action('/your-design-package/','See a design package')}</div></section>
   <section class="bp-section bp-panel" id="your-project"><div class="wrap">${intro('Services register','What are you planning?','Choose the help you need. Tell us about your project if you are unsure where to start.')}
-    <div class="bp-register">${serviceRegister.map(s => `<a class="bp-service" href="${esc(s.href)}"><span class="bp-service-top"><span class="bp-label">${s.code}</span>${arrow}</span><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p></a>`).join('')}</div></div></section>
+    <div class="bp-register">${serviceRegister.map(s => `<a class="bp-service" href="${esc(s.href)}"><span class="bp-service-top"><span class="bp-label">${s.code}</span>${arrow}</span><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p></a>`).join('')}</div>
+    <div class="bp-trade"><h3>For builders, architects and designers</h3><p>Need calculations to keep a job moving? Send your current drawings, postcode and target date. David will confirm what is needed, what it will cost and when you can expect it.</p>${action('#enquire','Ask about a project')}</div></div></section>
   <div class="bp-stories"><div id="from-sum-to-steel">${beamStory()}</div><div id="from-plot-to-plan">${plotStory()}</div></div>
   <section class="bp-section bp-panel" id="party-wall"><div class="wrap">${intro('S-06 / Neighbours and boundaries','Clear drawings for work near a boundary.','Measured survey and boundary drawings can show where the proposed work sits, what you are changing and how it relates to nearby structures.')}
     <div class="bp-two-columns"><article><h3>Party wall drawings</h3><p>The Party Wall etc. Act 1996 can apply to certain work to a shared wall, at a boundary or near adjoining foundations in England and Wales. The details of the work matter. We are not party wall surveyors, but our drawings give a surveyor what they need.</p><a href="/services/party-wall/">Explore party wall guidance ↗</a></article><article><h3>Measured survey and boundary drawings</h3><p>We can record site features and dimensions and draw the proposed layout for your agreed scope. A drawing shows the features we survey. For a legal boundary dispute, speak to a boundary surveyor or solicitor.</p><a href="/permissions/">Understand the separate permissions ↗</a></article></div>${action('#enquire','Discuss your drawings',true)}</div></section>
