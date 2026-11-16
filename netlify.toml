@@ -19,3 +19,10 @@
   for = "/thanks/*"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# Allows Google's preferred-source button (news.google.com) and its click-through frame.
+# Keep this in step with the Content-Security-Policy written to dist/_headers.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://news.google.com https://www.google.com https://www.gstatic.com https://accounts.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://news.google.com https://www.gstatic.com; font-src 'self'; connect-src 'self' https://news.google.com https://www.google.com; frame-src https://news.google.com https://www.google.com https://www.gstatic.com https://accounts.google.com; child-src https://news.google.com https://www.google.com https://www.gstatic.com https://accounts.google.com; form-action 'self'"

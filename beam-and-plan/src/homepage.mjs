@@ -1,5 +1,5 @@
 import { site } from './config.mjs';
-import { esc, faqBlock, quoteForm } from './templates.mjs';
+import { esc, faqBlock, preferredSource, quoteForm } from './templates.mjs';
 import { beamStory } from './beam-story.mjs';
 import { plotStory } from './plot-story.mjs';
 
@@ -54,7 +54,8 @@ export function homepageHeader() {
 
 export function homepageFooter() {
   return `<footer class="bp-footer"><div class="wrap">
-    <div class="bp-footer-top"><div><a class="brand" href="/">beam <span>&amp;</span> plan</a><p>Beam &amp; Plan will sort it.</p></div><div><a href="mailto:${esc(site.email)}">${esc(site.email)}</a><br><a href="tel:${esc(site.phone)}">${esc(site.displayPhone)}</a><br><a href="${esc(site.parent)}">Sister practice: Temporary Works Consulting &amp; Design Ltd</a></div></div>
+    <div class="bp-footer-top"><div><a class="brand" href="/">beam <span>&amp;</span> plan</a><p>Beam &amp; Plan will sort it.</p></div><div><a href="mailto:${esc(site.email)}">${esc(site.email)}</a><br><a href="tel:${esc(site.phone)}">${esc(site.displayPhone)}</a><br><a href="${esc(site.parent)}">Temporary works design for contractors: Temporary Works Consulting &amp; Design</a></div></div>
+    ${preferredSource('dark')}
     <div class="bp-scope"><h2>Scope and competence</h2><p>We agree the work, responsibilities and information needed before appointment. Calculations and drawings apply to the property and scope stated on them. The website examples explain the design process. Construction needs project-specific design, suitable temporary support and the relevant approvals. Planning and party wall guidance is jurisdiction specific.</p></div>
     <div class="bp-title-block"><span><small>Practice</small>Beam &amp; Plan</span><span><small>Drawing</small>Home structural design</span><span><small>Sheet</small>Sheet 01 of 01</span><span><small>Revision</small>Rev A</span></div>
     <nav aria-label="Footer"><a href="/structural-engineer-norwich-norfolk/">Norwich &amp; Norfolk</a><a href="/permissions/">Permissions</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
