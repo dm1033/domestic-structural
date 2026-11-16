@@ -62,6 +62,28 @@ test('production metadata includes all public routes, while confirmations stay n
  assert.match(await readFile(resolve(dist,'index.html'),'utf8'),/rel="canonical" href="https:\/\/beamandplan.com\/"/);
  const restore=spawnSync(process.execPath,['scripts/build.mjs'],{cwd:root,env:process.env,encoding:'utf8'});assert.equal(restore.status,0,restore.stderr);
 });
+test('preferred source control is on every page and the sister practice link stays clear', async () => {
+  const pages = (await files(dist)).filter(file => file.endsWith('.html'));
+  assert.ok(pages.length >= 25);
+  for (const page of pages) {
+    const html = await readFile(page, 'utf8');
+    assert.equal((html.match(/https:\/\/news\.google\.com\/swg\/js\/v1\/publisher\.js/g) || []).length, 1, page);
+    assert.match(html, /<head>[\s\S]*<script async src="https:\/\/news\.google\.com\/swg\/js\/v1\/publisher\.js"><\/script><\/head>/);
+    assert.equal((html.match(/google-add-preferred-source-btn/g) || []).length, 1, page);
+    assert.match(html, /<footer[\s\S]*<div class="preferred-source"><div google-add-preferred-source-btn data-theme="(?:light|dark)"><\/div><noscript><a href="https:\/\/www\.google\.com\/preferences\/source\?q=beamandplan\.com">Add Beam &amp; Plan as a preferred source on Google<\/a><\/noscript><\/div>[\s\S]*<\/footer>/);
+    assert.match(html, /href="https:\/\/www\.temporaryworksconsulting\.com">Temporary works design for contractors: Temporary Works Consulting &amp; Design<\/a>/);
+    assert.doesNotMatch(html, /http-equiv="Content-Security-Policy"/i);
+  }
+  const headers = await readFile(resolve(dist, '_headers'), 'utf8');
+  assert.match(headers, /Content-Security-Policy:.*script-src[^;\n]*https:\/\/news\.google\.com/);
+  assert.match(headers, /frame-src[^;\n]*https:\/\/news\.google\.com/);
+  assert.match(headers, /style-src 'self' 'unsafe-inline'/);
+  const toml = await readFile(resolve(root, '../netlify.toml'), 'utf8');
+  assert.match(toml, /Content-Security-Policy = ".*script-src[^"]*https:\/\/news\.google\.com/);
+  assert.match(toml, /frame-src[^"]*https:\/\/news\.google\.com/);
+  const about = await readFile(resolve(dist, 'about/index.html'), 'utf8');
+  assert.equal((about.match(/Temporary works design for contractors: Temporary Works Consulting &amp; Design/g) || []).length, 2);
+});
 test('HTML escapes enquiry/metadata content and rejects an unsafe deployment origin',()=>{
  assert.equal(esc('<script>"&'), '&lt;script&gt;&quot;&amp;');
  const html=layout({title:'<img onerror="bad">',description:'<unsafe>',body:'<h1>Safe</h1>'});assert.ok(!html.includes('<title><img'));assert.match(html,/noindex, follow/);
